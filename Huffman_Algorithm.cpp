@@ -133,9 +133,8 @@ public:
     string generateOutputFilename(string inputFile, bool decompress);
 };
 
-void Color(int color);
+void Color(int color); //Function prototype
 
-//Ryan
 NodePQ* Huffman::buildHuffmanTree(PriorityQueuePQ& pq) {
     while (!pq.isempty() && pq.front->next != nullptr) {
         NodePQ* left = pq.dequeue();
@@ -162,7 +161,6 @@ void Huffman::generateCodesPQ(NodePQ* root, string code) {
     generateCodesPQ(root->Right, code + "1");
 }
 
-//Ryan
 void Huffman::buildTreeAndCodes() {
     PriorityQueuePQ pq;
     for (int i = 0; i < charCount; i++) {
@@ -172,7 +170,6 @@ void Huffman::buildTreeAndCodes() {
     generateCodesPQ(rootPQ, "");
 }
 
-//Ryan
 Huffman::Huffman() {
     charCount = 0;
     for (int i = 0; i < MAXCHARACTER; i++) {
@@ -180,7 +177,6 @@ Huffman::Huffman() {
     }
 }
 
-//Ryan
 int Huffman::getFileSize(string filename) {
     ifstream file(filename, ios::binary);
     if (!file) {
@@ -197,7 +193,6 @@ int Huffman::getFileSize(string filename) {
     return size;
 }
 
-//Ryan
 void Huffman::countFreq(string filename, int filesize) {
     lastParsedFileName = filename;
     ifstream file(filename, ios::binary);
@@ -235,7 +230,6 @@ void Huffman::countFreq(string filename, int filesize) {
     file.close();
 }
 
-//Ryan
 void Huffman::decompress(string inputFile, string outputFile) {
     if (outputFile.empty()) {
         outputFile = generateOutputFilename(inputFile, true);
@@ -312,7 +306,6 @@ void Huffman::decompress(string inputFile, string outputFile) {
     system("pause");
 }
 
-//Rex
 void Huffman::printDebugTable() {
     cout << left << setw(20) << "CHARACTER" << setw(20) << "ASCII" << setw(20) << "FREQUENCY" << setw(20) << "HUFFMAN CODE" <<endl;
     cout << "=========================================================================\n";
@@ -356,7 +349,6 @@ void Huffman::printDebugTable() {
     cout << "\n=========================================================================\n";
 }
 
-//Rex
 string Huffman::generateOutputFilename(string inputFile, bool decompress) {
     string base = inputFile;
     string output;
@@ -407,7 +399,6 @@ string Huffman::generateOutputFilename(string inputFile, bool decompress) {
     return output;
 }
 
-//Rex
 void Huffman::compress(string inputFile, string outputFile) {
     Color(15);
     if (outputFile.empty()) {
@@ -490,13 +481,11 @@ void Huffman::compress(string inputFile, string outputFile) {
     cout << "Compression Done! Output: " << outputFile << endl;
     system("pause");
 }
-//Rex
 void Color(int color) {
     HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(console, color);
 }
 
-//Rex
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     Huffman h;
@@ -560,3 +549,4 @@ int main() {
 
     return 0;
 }
+
