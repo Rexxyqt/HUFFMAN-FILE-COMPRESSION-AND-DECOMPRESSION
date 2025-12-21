@@ -42,7 +42,7 @@ A C++ implementation of Huffman's Algorithm for efficient file compression and d
 ### Compilation
 Run the following command in your terminal:
 ```bash
-g++ -o HuffmanTool src/Huffman_Algorithm.cpp
+g++ -o HuffmanTool Huffman_Algorithm.cpp
 ```
 
 ### Usage
