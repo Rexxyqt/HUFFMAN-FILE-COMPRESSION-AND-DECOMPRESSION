@@ -1,14 +1,13 @@
 # Huffman Algorithm: File Compression and Decompression
 
-<pre style="color:red;">
+```text
 ██╗  ██╗██╗   ██╗███████╗███████╗███╗   ███╗ █████╗ ███╗   ██╗
-</pre>
-<pre style="color:green;">
 ██║  ██║██║   ██║██╔════╝██╔════╝████╗ ████║██╔══██╗████╗  ██║
-</pre>
-<pre style="color:blue;">
 ███████║██║   ██║█████╗  █████╗  ██╔████╔██║███████║██╔██╗ ██║
-</pre>
+██╔══██║██║   ██║██╔══╝  ██╔══╝  ██║╚██╔╝██║██╔══██║██║╚██╗██║
+██║  ██║╚██████╔╝██║     ██║     ██║ ╚═╝ ██║██║  ██║██║ ╚████║
+╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝     ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+```
 
 A C++ implementation of Huffman's Algorithm for efficient file compression and decompression. This project was developed as a Data Structure and Algorithm project.
 
@@ -31,8 +30,8 @@ A C++ implementation of Huffman's Algorithm for efficient file compression and d
 
 ## 📂 Project Structure
 
-- `src/Huffman_Algorithm.cpp`: Main source code containing the Huffman class and logic.
-- `src/MyFile.txt`: Sample text file for testing.
+- `Huffman_Algorithm.cpp`: Huffman class and logic.
+- `MyFile.txt`: Sample text file for testing.
 
 ## 💻 Getting Started
 
